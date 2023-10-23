@@ -1,6 +1,6 @@
 /* common */
 let scrolTop = "",
-	windowW  = "";
+	windowW  = window.innerWidth;
 
 $(function(){
 	scrolTop = $(window).scrollTop();
@@ -9,6 +9,8 @@ $(function(){
 	/* 페이지 리사이즈 이벤트 */
 	$(window).resize(function(){
 		windowW  = window.innerWidth;
+		infoSlide();
+		processSlide();
 	});
 
 	/* 페이지 스크롤 이벤트 */
@@ -25,8 +27,14 @@ $(function(){
 	imgSlide();
 	phoneSlide();
 	stepSlide();
-	infoSlide();
 	txtVerticalSlide();
+	recipeSlide();
+	blendSlide();
+	desertSlide();
+	placeSlide();
+
+	infoSlide();
+	processSlide();
 
 	// gsapFn();
 
@@ -56,7 +64,7 @@ function popupCloseFn(dataBtn){
 /*
 	main visual event
  */
-let mainSwiper, principleSwiper, txtSwiper, imgSwiper, phoneSwiper, stepSwiper, infoSwiper, txtVerticalSwiper;
+let mainSwiper, principleSwiper, imgSwiper, phoneSwiper, stepSwiper, infoSwiper = undefined, txtVerticalSwiper, recipeSwiper, blendSwiper, processSwiper = undefined;
 
 function mainSlide(){
 	mainSwiper = new Swiper(".main_slide", {
@@ -74,20 +82,74 @@ function mainSlide(){
 function principleSlide(){
 	principleSwiper = new Swiper(".principle_slide", {
 		speed: 1000,
-		// observe: true,
-		// observeParents: true,
 		slidesPerView : 1,
 		loop: true,
 		loopedSlides: 3,
-		// autoplay: {
-		// 	waitForTransition: false,
-		// 	disableOnInteraction: false,
-		// },
+		autoplay: {
+			waitForTransition: false,
+			disableOnInteraction: false,
+		},
 	});
 }
 
+let principleTxtSwiper, placeTxtSwiper, txtTopSwiper, txtBotSwiper, txtLeftSwiper, txtRightSwiper;
 function txtSlide(){
-	txtSwiper = new Swiper(".txt_slide", {
+	principleTxtSwiper = new Swiper(".principle_txt_slide", {
+		speed: 5000,
+		loop: true,
+		slidesPerView : "auto",
+		allowTouchMove : false,
+		autoplay: {
+			delay: 0,
+			disableOnInteraction: false,
+		},
+	});
+
+	placeTxtSwiper = new Swiper(".place_txt_slide", {
+		speed: 5000,
+		loop: true,
+		slidesPerView : "auto",
+		allowTouchMove : false,
+		autoplay: {
+			delay: 0,
+			disableOnInteraction: false,
+		},
+	});
+
+	txtTopSwiper = new Swiper(".txt_top_slide", {
+		speed: 5000,
+		loop: true,
+		slidesPerView : "auto",
+		allowTouchMove : false,
+		autoplay: {
+			delay: 0,
+			disableOnInteraction: false,
+		},
+	});
+
+	txtBotSwiper = new Swiper(".txt_bot_slide", {
+		speed: 5000,
+		loop: true,
+		slidesPerView : "auto",
+		allowTouchMove : false,
+		autoplay: {
+			delay: 0,
+			disableOnInteraction: false,
+		},
+	});
+
+	txtLeftSwiper = new Swiper(".txt_left_slide", {
+		speed: 5000,
+		loop: true,
+		slidesPerView : "auto",
+		allowTouchMove : false,
+		autoplay: {
+			delay: 0,
+			disableOnInteraction: false,
+		},
+	});
+
+	txtRightSwiper = new Swiper(".txt_right_slide", {
 		speed: 5000,
 		loop: true,
 		slidesPerView : "auto",
@@ -146,17 +208,39 @@ function stepSlide(){
 }
 
 function infoSlide(){
-	infoSwiper = new Swiper(".info_slide", {
-		speed: 5000,
-		loop: true,
-		spaceBetween: 30,
-		slidesPerView : "auto",
-		allowTouchMove : false,
-		autoplay: {
-			delay: 0,
-			disableOnInteraction: false,
-		},
-	});
+	if(windowW > 1100 && infoSwiper == undefined) {
+		infoSwiper = new Swiper(".info_slide", {
+			speed: 5000,
+			loop: true,
+			spaceBetween: 30,
+			slidesPerView : "auto",
+			allowTouchMove : false,
+			autoplay: {
+				delay: 0,
+				disableOnInteraction: false,
+			},
+		});
+	} else if(windowW <= 1100 && infoSwiper !== undefined){
+		infoSwiper.destroy();
+		infoSwiper = undefined;
+	}
+}
+function processSlide(){
+	if(windowW < 980 && processSwiper == undefined) {
+		processSwiper = new Swiper(".process_slide", {
+			// speed: 5000,
+			loop: true,
+			spaceBetween: 30,
+			centeredSlides: true,
+			// autoplay: {
+			// 	delay: 1500,
+			// 	disableOnInteraction: false,
+			// },
+		});
+	} else if(windowW >= 980 && processSwiper !== undefined){
+		processSwiper.destroy();
+		processSwiper = undefined;
+	}
 }
 function txtVerticalSlide(){
 	txtVerticalSwiper = new Swiper(".txt_slide_vertical", {
@@ -172,6 +256,50 @@ function txtVerticalSlide(){
 	});
 }
 
+function recipeSlide(){
+	recipeSwiper = new Swiper(".recipeSwiper", {
+		loop: true,
+		spaceBetween: 20,
+		slidesPerView: 2,
+		pagination: {
+			el: ".recipe-pagination",
+			type: "progressbar",
+		},
+		navigation: {
+			nextEl: ".recipe-next",
+			prevEl: ".recipe-prev",
+		},
+	});
+
+	recipeSwiper.on("slideChange", function () {
+		$(".recipe_box .img_con li").removeClass("active");
+		$(".recipe_box .img_con li").eq(recipeSwiper.realIndex).addClass("active");
+
+		$(".recipe_box .txt_list dl").removeClass("active");
+		$(".recipe_box .txt_list dl").eq(recipeSwiper.realIndex).addClass("active");
+	});
+}
+
+function blendSlide(){
+	blendSwiper = new Swiper(".blendSwiper", {
+		loop: true,
+		effect: "fade",
+		autoplay: {
+			delay: 4000,
+			disableOnInteraction: false,
+		}
+	});
+
+	blendSwiper.on("slideChange", function () {
+		$(".blend_con .step_list .item").removeClass("active");
+		$(".blend_con .step_list .item").eq(blendSwiper.realIndex).addClass("active");
+	});
+
+	$(".blend_con .step_list .item").on("click", function(){
+		blendSwiper.slideTo($(this).index()+1);
+	});
+}
+
 function gsapFn(){
 	// gsap.registerPlugin(ScrollTrigger);
 
@@ -181,6 +309,128 @@ function gsapFn(){
 		duration: 1,
 		y: 0,
 		opacity: 1,
+	});
+}
+
+let desertSwiper, desertTopSwiper, desertBotSwiper;
+function desertSlide(){
+	desertSwiper = new Swiper(".desert_swiper", {
+		speed: 4500,
+		loop: true,
+		slidesPerView : "auto",
+		allowTouchMove : false,
+		autoplay: {
+			delay: 0,
+			disableOnInteraction: false,
+		},
+	});
+
+	desertTopSwiper = new Swiper(".desert_top_slide", {
+		speed: 5000,
+		loop: true,
+		slidesPerView : "auto",
+		allowTouchMove : false,
+		autoplay: {
+			delay: 0,
+			disableOnInteraction: false,
+		},
+	});
+
+	desertBotSwiper = new Swiper(".desert_bot_slide", {
+		speed: 5000,
+		loop: true,
+		slidesPerView : "auto",
+		allowTouchMove : false,
+		autoplay: {
+			delay: 0,
+			disableOnInteraction: false,
+		},
+	});
+}
+
+let placeSwiper, placePrevSwiper, placeNextSwiper, placeSwiper2, placePrevSwiper2, placeNextSwiper2;
+function placeSlide(){
+	oldIndex = 0;
+	oldIndex2 = 0;
+
+	placeSwiper = new Swiper(".place_slide", {
+		loop: true,
+		slidesPerView : 1,
+		navigation: {
+			nextEl: ".place-next",
+			prevEl: ".place-prev",
+		},
+	});
+
+	placePrevSwiper = new Swiper(".place_prev_slide", {
+		loop: true,
+		slidesPerView : 1,
+		allowTouchMove : false,
+	});
+
+	placeNextSwiper = new Swiper(".place_next_slide", {
+		loop: true,
+		slidesPerView : 1,
+		allowTouchMove : false,
+	});
+
+	placeSwiper.on("slideNextTransitionStart", function () {
+		placePrevSwiper.slideNext();
+		placeNextSwiper.slideNext();
+	});
+
+	placeSwiper.on("slidePrevTransitionStart", function () {
+		placePrevSwiper.slidePrev();
+		placeNextSwiper.slidePrev();
+	});
+
+	$(".place_con .tab_list li").on("click", function (){
+		$(this).siblings().removeClass("active");
+		$(this).addClass("active");
+
+		$(".place_con .slide_con .inner").removeClass("active");
+		$(".place_con .slide_con .inner").eq($(this).index()).addClass("active");
+
+		if( $(this).index() > 0 ) {
+			if( placeSwiper2 != undefined ) {
+				placeSwiper2.destroy();
+				placePrevSwiper2.destroy();
+				placeNextSwiper2.destroy();
+			}
+
+			placeSwiper2 = new Swiper(".place_slide2", {
+				loop: true,
+				slidesPerView : 1,
+				navigation: {
+					nextEl: ".place-next2",
+					prevEl: ".place-prev2",
+				},
+			});
+
+			placePrevSwiper2 = new Swiper(".place_prev_slide2", {
+				loop: true,
+				slidesPerView : 1,
+				allowTouchMove : false,
+			});
+
+			placeNextSwiper2 = new Swiper(".place_next_slide2", {
+				loop: true,
+				slidesPerView : 1,
+				allowTouchMove : false,
+			});
+
+			placeSwiper2.on("slideNextTransitionStart", function () {
+				placePrevSwiper2.slideNext();
+				placeNextSwiper2.slideNext();
+			});
+
+			placeSwiper2.on("slidePrevTransitionStart", function () {
+				placePrevSwiper2.slidePrev();
+				placeNextSwiper2.slidePrev();
+			});
+		} else {
+
+		}
 	});
 }
 
@@ -195,6 +445,11 @@ function tabEventFn(){
 		$(this).addClass("active").siblings().removeClass("active");
 		idx = $tab.find(".active").index();
 		$tabCont.eq(idx).show().siblings().hide();
+
+		let $img = $tab.parents().siblings(".tab_img").children();
+		if($img.length){
+			$img.eq(idx).show().siblings().hide();
+		}
 	});
 }
 
