@@ -662,49 +662,6 @@ input::placeholder, textarea::placeholder {
 	display: none;
 }
 
-.highlight {
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	width: -webkit-fit-content;
-	width: -moz-fit-content;
-	width: fit-content;
-	font-size: 78px;
-	color: #fff;
-}
-
-.highlight span {
-	position: relative;
-	z-index: 1;
-}
-
-.highlight::before {
-	content: "";
-	position: absolute;
-	left: -5px;
-	top: 45%;
-	-webkit-transform: translateY(-50%);
-	    -ms-transform: translateY(-50%);
-	        transform: translateY(-50%);
-	width: 0;
-	height: calc(100% + 5px);
-	background-color: #e814ff;
-	-webkit-transition: width 0.5s;
-	transition: width 0.5s;
-}
-
-.highlight.bg_black::before {
-	background-color: #000;
-}
-
-.highlight.bg_purple::before {
-	background-color: #9f16ff;
-}
-
-.highlight.animate::before {
-	width: calc(100% + 10px);
-}
-
 .c_white {
 	color: #fff !important;
 }
@@ -718,7 +675,34 @@ input::placeholder, textarea::placeholder {
 }
 
 .c_gradient {
-	background: #ff1398;
+	position: relative;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ff1398), color-stop(57%, #a524ff), to(#128cff));
+	background: -webkit-linear-gradient(top, #ff1398 0%, #a524ff 57%, #128cff 100%);
+	background: linear-gradient(-180deg, #ff1398 0%, #a524ff 57%, #128cff 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.c_gradient.line::before {
+	content: attr(data-text);
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	font-size: inherit;
+	-webkit-text-stroke-width: 6px;
+	-webkit-text-stroke-color: white;
+}
+
+.c_gradient.line::after {
+	content: attr(data-text);
+	z-index: 1;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
 	background: -webkit-gradient(linear, left top, left bottom, from(#ff1398), color-stop(57%, #a524ff), to(#128cff));
 	background: -webkit-linear-gradient(top, #ff1398 0%, #a524ff 57%, #128cff 100%);
 	background: linear-gradient(-180deg, #ff1398 0%, #a524ff 57%, #128cff 100%);
@@ -1058,6 +1042,10 @@ input::placeholder, textarea::placeholder {
 
 	.mo_only {
 		display: block;
+	}
+
+	.c_gradient.line::before {
+		-webkit-text-stroke-width: 0.78vw;
 	}
 
 	/* space */

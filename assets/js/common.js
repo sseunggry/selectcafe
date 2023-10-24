@@ -23,6 +23,7 @@ $(function(){
 	// main slide event
 	mainSlide();
 	principleSlide();
+	listSlide();
 	txtSlide();
 	imgSlide();
 	phoneSlide();
@@ -32,6 +33,7 @@ $(function(){
 	blendSlide();
 	desertSlide();
 	placeSlide();
+	thumbSlide();
 
 	infoSlide();
 	processSlide();
@@ -40,6 +42,8 @@ $(function(){
 
 	tabEventFn();
 	moreContFn();
+
+	gsapMotion();
 });
 
 /* 클릭 방지 이벤트 */
@@ -61,10 +65,86 @@ function popupCloseFn(dataBtn){
 	$(".popupWrap[data-pop='"+ dataBtn +"']").stop().fadeOut("fast");
 }
 
+//motion
+gsap.registerPlugin(ScrollTrigger);
+
+function gsapMotion(){
+	let zoomIn = $(".zoomIn");
+
+	// zoomIn.map((el) => {
+	// 	gsap.timeline({
+	// 		// repeat: -1,
+	// 		// repeatRefresh: true,
+	// 		scrollTrigger: {
+	// 			trigger: el,
+	// 			start: 'top 70%',
+	// 		}
+	// 	}).fromTo(el, {scale: 0}, {scale: 1, ease: 'back.out(2)'});
+	// });
+
+	gsap.timeline({
+		scrollTrigger: {
+			trigger: ".zoomIn",
+			start: "top 70%",
+		},
+	}).fromTo(".zoomIn", {scale: 0}, {scale: 1, ease: "back.out(2)"});
+
+	gsap.timeline({
+		scrollTrigger: {
+			trigger: ".fade_left",
+			start: "top 70%",
+		}
+	}).fromTo(".fade_left", {opacity: 0, xPercent: 15}, {opacity: 1, xPercent: 0, ease: "none", duration: 0.5});
+
+	gsap.timeline({
+		scrollTrigger: {
+			trigger: ".fade_right",
+			start: "top 70%",
+		}
+	}).fromTo(".fade_right", {opacity: 0, xPercent: -15}, {opacity: 1, xPercent: 0, ease: "none", duration: 0.5});
+
+	gsap.timeline({
+		scrollTrigger: {
+			trigger: ".fade_up",
+			start: "top 70%",
+		}
+	}).fromTo(".fade_up", {opacity: 0, yPercent: 15}, {opacity: 1, yPercent: 0, ease: "none", duration: 0.5});
+
+
+}
+
+(function() {//raise
+	// window.introTl = gsap.timeline({});
+	// introTl.call(function() {
+	// 	waveTl.play();
+	// }, null, 0.1)
+	// introTl.fromTo('.raise_tit', {opacity: 0, y: 100}, {opacity: 1, y: 0, duration: 0.7})
+	// introTl.fromTo('.raise_subtit, .raise_txt', {opacity: 0, y: 100}, {opacity: 1, y: 0, duration: 0.7}, '-=0.2')
+	// introTl.fromTo('.raise_deco_wrap', {scale: 0}, {scale: 1, duration: 0.7, ease: 'back.out(2)'}, '-=0.2')
+	// introTl.fromTo('.raise_bot_txt', {opacity: 0, y: 100}, {opacity: 1, y: 0, duration: 0.7}, '-=0.2')
+	// introTl.call(function() {
+	// 	cheeseTl.play();
+	// }, null, '+=0.1')
+	//
+	// var waveTl = gsap.timeline({paused: true})
+	// waveTl.fromTo('.raise_wave_wrap > div:nth-child(1)', {scale: 0, opacity: 0}, {scale: 1, opacity: 1, duration: 1.2})
+	// waveTl.fromTo('.raise_wave_wrap > div:nth-child(2)', {scale: 0.5, opacity: 0}, {scale: 1, opacity: 1, duration: 1.2}, '-=0.9')
+	// waveTl.fromTo('.raise_wave_wrap > div:nth-child(3)', {scale: 0.5, opacity: 0}, {scale: 1, opacity: 1, duration: 1.2}, '-=0.9')
+	// waveTl.fromTo('.raise_wave_wrap > div:nth-child(4)', {scale: 0.5, opacity: 0}, {scale: 1, opacity: 1, duration: 1.2}, '-=0.9')
+	//
+	// var cheeseTl = gsap.timeline({paused: true, repeat: -1, repeatDelay: 2})
+	// cheeseTl.fromTo('.raise_deco03', {rotate: 0}, {rotate: -10, duration: 0.1})
+	// cheeseTl.to('.raise_deco03', {rotate: 20, duration: 0.1})
+	// cheeseTl.to('.raise_deco03', {rotate: -5, duration: 0.1})
+	// cheeseTl.to('.raise_deco03', {rotate: 10, duration: 0.1})
+	// cheeseTl.to('.raise_deco03', {rotate: 0, duration: 0.1})
+
+}());
+
 /*
 	main visual event
  */
-let mainSwiper, principleSwiper, imgSwiper, phoneSwiper, stepSwiper, infoSwiper = undefined, txtVerticalSwiper, recipeSwiper, blendSwiper, processSwiper = undefined;
+let mainSwiper, principleSwiper, imgSwiper, phoneSwiper, stepSwiper, infoSwiper = undefined, txtVerticalSwiper, recipeSwiper, recipeMoSwiper, blendSwiper, processSwiper = undefined, listSwiper;
 
 function mainSlide(){
 	mainSwiper = new Swiper(".main_slide", {
@@ -85,20 +165,46 @@ function principleSlide(){
 		slidesPerView : 1,
 		loop: true,
 		loopedSlides: 3,
+		allowTouchMove: false,
 		autoplay: {
 			waitForTransition: false,
 			disableOnInteraction: false,
 		},
 	});
+
+	principleSwiper.on("slideChangeTransitionEnd", function () {
+		if( principleSwiper.realIndex == 0 ) {
+			$(".principle_slide .swiper-slide").addClass("remove");
+			principleSwiper.destroy();
+
+			principleSlide();
+
+			setTimeout(function (){
+				$(".principle_slide .swiper-slide").removeClass("remove");
+			}, 100);
+		}
+	});
+}
+function listSlide(){
+	listSwiper = new Swiper(".list_slide", {
+		speed: 5000,
+		loop: true,
+		slidesPerView : "auto",
+		allowTouchMove : false,
+		autoplay: {
+			delay: 0,
+			disableOnInteraction: false,
+		},
+	});
 }
 
-let principleTxtSwiper, placeTxtSwiper, txtTopSwiper, txtBotSwiper, txtLeftSwiper, txtRightSwiper;
+let principleTxtSwiper, placeTxtSwiper, txtTopSwiper, txtBotSwiper, txtLeftSwiper, txtRightSwiper, thumbSwiper;
 function txtSlide(){
 	principleTxtSwiper = new Swiper(".principle_txt_slide", {
 		speed: 5000,
 		loop: true,
 		slidesPerView : "auto",
-		allowTouchMove : false,
+		// allowTouchMove : false,
 		autoplay: {
 			delay: 0,
 			disableOnInteraction: false,
@@ -256,28 +362,102 @@ function txtVerticalSlide(){
 	});
 }
 
-function recipeSlide(){
-	recipeSwiper = new Swiper(".recipeSwiper", {
+function thumbSlide(){
+	thumbSwiper = new Swiper(".section12 .thumb_slide", {
+		speed: 3000,
 		loop: true,
-		spaceBetween: 20,
-		slidesPerView: 2,
-		pagination: {
-			el: ".recipe-pagination",
-			type: "progressbar",
-		},
-		navigation: {
-			nextEl: ".recipe-next",
-			prevEl: ".recipe-prev",
+		slidesPerView : "auto",
+		allowTouchMove : false,
+		autoplay: {
+			delay: 0,
+			disableOnInteraction: false,
 		},
 	});
+}
 
-	recipeSwiper.on("slideChange", function () {
-		$(".recipe_box .img_con li").removeClass("active");
-		$(".recipe_box .img_con li").eq(recipeSwiper.realIndex).addClass("active");
+let recipeTrigger = true;
+function recipeSlide(){
+	$(window).resize(function(){
+		if( windowW > 768 ) {
+			if( !recipeTrigger ) {
+				if( recipeSwiper != undefined ) {
+					recipeSwiper.destroy();
+				}
+				recipeSwiper = new Swiper(".recipeSwiper", {
+					loop: true,
+					spaceBetween: 20,
+					slidesPerView: 2,
+					pagination: {
+						el: ".recipe-pagination",
+						type: "progressbar",
+					},
+					navigation: {
+						nextEl: ".recipe-next",
+						prevEl: ".recipe-prev",
+					},
+					autoplay: {
+						disableOnInteraction: false,
+					},
+				});
 
-		$(".recipe_box .txt_list dl").removeClass("active");
-		$(".recipe_box .txt_list dl").eq(recipeSwiper.realIndex).addClass("active");
+				recipeTrigger = true;
+			}
+		} else {
+			if( recipeTrigger ) {
+				if( recipeMoSwiper != undefined ) {
+					recipeMoSwiper.destroy();
+				}
+				recipeMoSwiper = new Swiper(".recipeMoSwiper", {
+					loop: true,
+					pagination: {
+						el: ".recipeMo-pagination",
+						type: "progressbar",
+					},
+				});
+
+				recipeTrigger = false;
+			}
+		}
 	});
+
+	if( windowW > 768 ) {
+		recipeSwiper = new Swiper(".recipeSwiper", {
+			loop: true,
+			spaceBetween: 20,
+			slidesPerView: 2,
+			pagination: {
+				el: ".recipe-pagination",
+				type: "progressbar",
+			},
+			navigation: {
+				nextEl: ".recipe-next",
+				prevEl: ".recipe-prev",
+			},
+			autoplay: {
+				disableOnInteraction: false,
+			},
+		});
+
+		recipeSwiper.on("slideChange", function () {
+			$(".recipe_box .img_con li").removeClass("active");
+			$(".recipe_box .img_con li").eq(recipeSwiper.realIndex).addClass("active");
+
+			$(".recipe_box .txt_list dl").removeClass("active");
+			$(".recipe_box .txt_list dl").eq(recipeSwiper.realIndex).addClass("active");
+		});
+
+		recipeTrigger = true;
+	} else {
+		recipeMoSwiper = new Swiper(".recipeMoSwiper", {
+			loop: true,
+			pagination: {
+				el: ".recipeMo-pagination",
+				type: "progressbar",
+			},
+		});
+
+		recipeTrigger = false;
+	}
 }
 
 function blendSlide(){
