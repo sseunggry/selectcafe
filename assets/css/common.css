@@ -1369,41 +1369,7 @@ input::placeholder, textarea::placeholder {
 		padding-left: 11.7vw !important;
 	}
 }
-/* motion */
-.bounce li {
-	-webkit-animation: aniBounce 1s infinite alternate ease-in;
-	        animation: aniBounce 1s infinite alternate ease-in;
-	-webkit-animation-fill-mode: both;
-	        animation-fill-mode: both;
-}
-
-@-webkit-keyframes aniBounce {
-	0% {
-		-webkit-transform: translate3d(0, 0, 0);
-		        transform: translate3d(0, 0, 0);
-	}
-	50% {
-		-webkit-transform: translate3d(0, -10%, 0);
-		        transform: translate3d(0, -10%, 0);
-	}
-	100% {
-		-webkit-transform: translate3d(0, 0, 0);
-		        transform: translate3d(0, 0, 0);
-	}
-}
-
-@keyframes aniBounce {
-	0% {
-		-webkit-transform: translate3d(0, 0, 0);
-		        transform: translate3d(0, 0, 0);
-	}
-	50% {
-		-webkit-transform: translate3d(0, -10%, 0);
-		        transform: translate3d(0, -10%, 0);
-	}
-	100% {
-		-webkit-transform: translate3d(0, 0, 0);
-		        transform: translate3d(0, 0, 0);
-	}
+html {
+	scroll-behavior: smooth;
 }
 /*# sourceMappingURL=maps/common.css.map */

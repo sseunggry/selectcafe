@@ -3453,6 +3453,7 @@
 }
 
 .section08 .hotplace_con .hotplace_txt {
+	overflow: hidden;
 	position: absolute;
 	top: 50%;
 	left: 0;
@@ -4306,11 +4307,8 @@
 
 .section12 .thumb_con {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	    -ms-transform: translate(-50%, -50%);
-	        transform: translate(-50%, -50%);
+	top: 0;
+	left: 0;
 	max-width: 1920px;
 	width: 100%;
 	height: 100%;
@@ -4558,6 +4556,7 @@
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
+	gap: 30px;
 	margin-top: -95px;
 	z-index: 2;
 }
@@ -4586,10 +4585,6 @@
 	border-radius: 50%;
 	background: -webkit-linear-gradient(135deg, #ff1398 0%, #a524ff 57%, #128cff 100%);
 	background: linear-gradient(-45deg, #ff1398 0%, #a524ff 57%, #128cff 100%);
-}
-
-.section13 .info_con .ranking_list li + li {
-	margin-left: 30px;
 }
 
 .section13 .info_con .ranking_list li::after {
@@ -4660,16 +4655,13 @@
 
 	.section13 .info_con .ranking_list {
 		padding: 0 70px;
+		gap: 20px;
 	}
 
 	.section13 .info_con .ranking_list li {
 		width: 194px;
 		height: 194px;
 		font-size: 20px;
-	}
-
-	.section13 .info_con .ranking_list li + li {
-		margin-left: 20px;
 	}
 
 	.section13 .info_con .ranking_list li span {
@@ -4715,6 +4707,7 @@
 
 	.section13 .info_con .ranking_list {
 		padding: 0 9.11vw;
+		gap: 2.6vw;
 	}
 
 	.section13 .info_con .ranking_list li {
@@ -4723,11 +4716,8 @@
 		font-size: 2.6vw;
 	}
 
-	.section13 .info_con .ranking_list li + li {
-		margin-left: 2.6vw;
-	}
-
 	.section13 .info_con .ranking_list li span {
+		margin: 0.4vw 0 -1.82vw;
 		font-size: 7.42vw;
 	}
 
@@ -5136,9 +5126,15 @@
 	}
 
 	.section14 .step_slide .swiper-pagination .step.swiper-pagination-bullet-active::after {
-		top: 0.59vw;
+		top: 0.65vw;
 		width: 1.3vw;
 		height: 1.3vw;
+	}
+
+	.section14 .title_box .title .highlight {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
 	}
 }
 /*
