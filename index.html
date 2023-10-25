@@ -21,15 +21,14 @@
 
 <link rel="stylesheet" type="text/css" href="./assets/css/plugin/swiper.min.css">
 <link rel="stylesheet" type="text/css" href="./assets/css/plugin/animate.css">
-<!--<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">-->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 <link rel="stylesheet" type="text/css" href="./assets/css/common.css">
 <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/motion.css">
 <script type="text/javascript" src="./assets/js/plugin/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="./assets/js/plugin/jquery.touchSwipe.min.js"></script>
 <script type="text/javascript" src="./assets/js/plugin/swiper.min.js"></script>
-<!--<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script type="text/javascript" src="./assets/js/common.js"></script>
 <title>SELECT COFFEE LAB</title>
 
@@ -66,10 +65,10 @@
                 </div>
 
                 <div class="main_con">
-                    <div class="main_title animate animate__animated">
+                    <div class="main_title" data-aos="fade-up">
                         <p class="tag"><img src="./assets/img/main_title_01.png" alt=""></p>
                         <h2 class="aggro">
-                            카페를 <span class="animate__flash animate__animated animate__infinite"><img src="./assets/img/main_title_02.png" alt=""></span><br/>
+                            카페를 <span class="" data-aos="flash"><img src="./assets/img/main_title_02.png" alt=""></span><br/>
                             하고 싶은신가요?
                         </h2>
                     </div>
@@ -89,8 +88,8 @@
                 </div>
 
                 <div class="main_product">
-                    <div class="items items1 animate animate__animated"><img src="./assets/img/main_product_01.png" alt=""></div>
-                    <div class="items items2 animate animate__animated"><img src="./assets/img/main_product_02.png" alt=""></div>
+                    <div class="items" data-aos="fade-right"><img src="./assets/img/main_product_01.png" alt=""></div>
+                    <div class="items" data-aos="fade-left"><img src="./assets/img/main_product_02.png" alt=""></div>
                 </div>
             </section>
             <!-- // main visual -->
@@ -116,7 +115,7 @@
                             <p class="c_white">커피 1잔에</p>
                             <div class="compare">
                                 <p class="c_pink">1,500원 vs</p>
-                                <p class="highlight animate " data-aos="fade-right"><span>3,500원</span></p>
+                                <p class="highlight" data-aos="highlight"><span>3,500원</span></p>
                             </div>
                         </div>
                     </div>
@@ -124,12 +123,13 @@
                     <div class="flex_con">
                         <div class="img_con">
                             <img src="./assets/img/section_01_obj_01.jpg" alt="">
-<!--                                <div class="icon_con">-->
-<!--                                    <p><img src="./assets/img/section_01_obj_01_01.png" alt=""><span>1,500원</span></p>-->
-<!--                                    <p><img src="./assets/img/section_01_obj_01_02.png" alt=""><span>3,500원</span></p>-->
-<!--                                </div>-->
+                            <div class="icon_con">
+                                <p class="normal"><img src="./assets/img/section_01_obj_01_01.png" alt=""><span>1,500원</span></p>
+                                <p class="icon"><img src="./assets/img/section_01_obj_01_03.png" alt=""></p>
+                                <p class="blod"><img src="./assets/img/section_01_obj_01_02.png" alt="" data-aos="flash"><span>3,500원</span></p>
+                            </div>
                         </div>
-                        <dl class="txt_con fade_left">
+                        <dl class="txt_con" data-aos="fade-left">
                             <dt class="aggro">
                                 저가 커피는
                                 <span>속 빈 강정일 뿐</span>
@@ -150,7 +150,7 @@
                         <div class="img_con">
                             <img src="./assets/img/section_01_obj_02.jpg" alt="">
                         </div>
-                        <dl class="txt_con fade_right">
+                        <dl class="txt_con" data-aos="fade-right">
                             <dt class="aggro">
                                 어딜가나 개성없이
                                 <span>비슷한 인테리어는 그만!</span>
@@ -168,10 +168,10 @@
                     </div>
 
                 </div>
-                <div class="banner fade_up">
+                <div class="banner" data-aos="fade-up">
                     <h3 class="title aggro">
                         1인가구 증가로<br/> 음료만 팔리는 카페는
-                        <p class="highlight animate"><span>더이상 경쟁력이 없다!</span></p>
+                        <p class="highlight" data-aos="highlight" data-aos-delay="800"><span>더이상 경쟁력이 없다!</span></p>
                     </h3>
                     <p class="txt">
                         1인가구 시장 상황에 맞춘 퀄리티 높은 간단 디저트가 있어야<br/>
@@ -189,8 +189,8 @@
                         <img src="./assets/img/section_02_obj_02.png" alt="" data-aos="fade-left">
                     </div>
                     <div class="mo_only">
-                        <img src="./assets/img/mo_section_02_obj_01.png" alt="" data-aos="fade-right">
-                        <img src="./assets/img/mo_section_02_obj_02.png" alt="" data-aos="fade-left">
+                        <img src="./assets/img/mo_section_02_obj_01.png" alt="">
+                        <img src="./assets/img/mo_section_02_obj_02.png" alt="">
                     </div>
                 </div>
                 <div class="title_box">
@@ -198,8 +198,8 @@
                     <div class="title">
                         <p>카페창업의</p>
                         <p>
-                            <span class="c_gradient">3가지</span>
-                            <span class="c_white highlight animate"><span>성공원칙</span></span>
+                            <span class="c_gradient" data-aos="flash">3가지</span>
+                            <span class="c_white highlight" data-aos="highlight"><span>성공원칙</span></span>
                         </p>
                     </div>
                 </div>
@@ -249,13 +249,26 @@
 
             <!-- section03 -->
             <section class="section03">
+                <div class="main_star pc_only">
+                    <div class="stars stars1"><img src="./assets/img/section03_stars_01.png" alt=""></div>
+                    <div class="stars stars2"><img src="./assets/img/section03_stars_02.png" alt=""></div>
+                    <div class="stars stars3"><img src="./assets/img/section03_stars_03.png" alt=""></div>
+                    <div class="stars stars4"><img src="./assets/img/section03_stars_04.png" alt=""></div>
+                </div>
+
+                <div class="main_star mo_only">
+                    <div class="stars stars1"><img src="./assets/img/mo_section03_stars_01.png" alt=""></div>
+                    <div class="stars stars2"><img src="./assets/img/mo_section03_stars_02.png" alt=""></div>
+                    <div class="stars stars3"><img src="./assets/img/mo_section03_stars_03.png" alt=""></div>
+                </div>
+
                 <div class="title_box">
                     <p class="tag c_light_gray">단골을 부르는 셀렉커피랩</p>
                     <div class="title">
-                        <p class="highlight animate"><span>탄탄한 매출</span></p>
+                        <p class="highlight" data-aos="highlight"><span>탄탄한 매출</span></p>
                         <p>
                             <span class="c_white">지금</span>
-                            <span class="c_gradient">공개합니다</span>
+                            <span class="c_gradient" data-aos="flash">공개합니다</span>
                         </p>
                     </div>
                     <p class="desc c_light_gray">몸만 고생하고 남는 것 없는 브랜드가 아닌 <br/> 잘 팔리고 많이 남는 수익구조를 만들었습니다</p>
@@ -265,10 +278,12 @@
                         <img src="./assets/img/section_03_line.png" alt="">
                     </div>
                     <div class="img_con">
-                        <img src="./assets/img/section_03_receipt_.png" alt="" class="pc_only">
+                        <img src="./assets/img/section_03_receipt_.png" alt="" class="pc_only" data-aos="fade-down">
                         <img src="./assets/img/mo_section_03_receipt.png" alt="" class="mo_only">
                     </div>
-                    <p class="stamp zoomIn">평균수익률 <span>30%</span></p>
+                    <p class="stamp" data-aos="zoom-in" data-aos-easing="ease-in-out-back" data-aos-delay="600" data-aos-duration="400">
+                        평균수익률 <span>30%</span>
+                    </p>
                     <ul class="list pc_only">
                         <li><strong>a급 중심상권</strong>이 아니더라도</li>
                         <li>창업비용은 <strong>최소자본으로</strong></li>
@@ -285,9 +300,9 @@
                     </div>
                 </div>
                 <div class="coin_box">
-                    <img src="./assets/img/section_03_coin_01.png" alt="">
-                    <img src="./assets/img/section_03_coin_02.png" alt="">
-                    <img src="./assets/img/section_03_coin_03.png" alt="">
+                    <img src="./assets/img/section_03_coin_01.png" alt="" data-aos="fade-down-right" data-aos-offset="0">
+                    <img src="./assets/img/section_03_coin_02.png" alt="" data-aos="fade-down-left" data-aos-offset="0">
+                    <img src="./assets/img/section_03_coin_03.png" alt="" data-aos="fade-down-left" data-aos-offset="0">
                 </div>
             </section>
             <!-- //section03 -->
@@ -299,24 +314,24 @@
                         <p class="tag c_light_gray">감동 한 잔을 위한 디자인</p>
                         <div class="title">
                             <p>
-                                <span class="c_gradient line" data-text="특별함">특별함</span><span class="c_white">을 만드는</span>
+                                <span class="c_gradient line" data-text="특별함" data-aos="flash">특별함</span><span class="c_white">을 만드는</span>
                             </p>
-                            <p class="highlight animate bg_black"><span>커피 전문가들</span></p>
+                            <p class="highlight bg_black" data-aos="highlight"><span>커피 전문가들</span></p>
                         </div>
                         <p class="desc c_light_gray">10년 이상 경력의 로스터들과 국가대표 커퍼가 선별한 생두로 주문 후 <br/> 당일 로스팅 출고를 원칙으로 한 신선한 원두를 사용하여 음료를 제조합니다. </p>
                     </div>
                     <div class="obj_box">
-                        <img src="./assets/img/section_04_obj_01.png" alt="">
-                        <img src="./assets/img/section_04_obj_02.png" alt="">
-                        <img src="./assets/img/section_04_obj_03.png" alt="">
-                        <img src="./assets/img/section_04_obj_04.png" alt="">
+                        <img src="./assets/img/section_04_obj_01.png" alt="" data-aos="fade-up">
+                        <img src="./assets/img/section_04_obj_02.png" alt="" data-aos="fade-up">
+                        <img src="./assets/img/section_04_obj_03.png" alt="" data-aos="fade-up">
+                        <img src="./assets/img/section_04_obj_04.png" alt="" data-aos="fade-up">
                     </div>
                 </div>
                 <div class="history_con">
                     <div class="sub_title_box">
                         <div class="sub_title">
                             <p>셀렉커피랩 R&D 부문</p>
-                            <p class="highlight animate"><span>국가대표 바리스타</span></p>
+                            <p class="highlight" data-aos="highlight"><span>국가대표 바리스타</span></p>
                         </div>
                         <p class="desc">셀렉커피랩 원두R&D부문 국가대표 바리스타팀은 <br/> 10년 이상 다수 대회의 심사 및 수상을 하였습니다.</p>
                     </div>
@@ -404,8 +419,8 @@
                 <div class="title_box">
                     <p class="tag c_light_gray">완벽을 추구하는 셀렉커피랩만의</p>
                     <div class="title">
-                        <p class="c_gradient">독보적인</p>
-                        <p class="highlight animate"><span>시크릿 레시피</span></p>
+                        <p class="c_gradient" data-aos="flash">독보적인</p>
+                        <p class="highlight" data-aos="highlight"><span>시크릿 레시피</span></p>
                     </div>
                     <p class="desc c_light_gray">평범한 음료는 그만! 경쟁력있는 셀렉만의 <br/> 시크릿레시피로 고객분들에게 특별한 경험을 제공합니다.</p>
                 </div>
@@ -427,7 +442,7 @@
                             <dl class="active">
                                 <dt class="aggro">
                                     셀렉만의 <span class="c_gradient">맞춤 원두디자인</span>
-                                    <p class="highlight animate"><span>블렌딩 3종류</span></p>
+                                    <p class="highlight" data-aos="highlight"><span>블렌딩 3종류</span></p>
                                 </dt>
                                 <dd class="dot"><span class="blod">셀렉 밀크베이스 원두블렌딩</span> <span class="semi">:</span> 견과류와 같은 고소한 단맛, 중후한바디</dd>
                                 <dd class="dot"><span class="blod">셀렉 초콜렛 티 원두블렌딩</span> <span class="semi">:</span> 초콜렛과 같은 단맛, 부드러운 산미, 클린한 에프터</dd>
@@ -436,14 +451,14 @@
                             <dl>
                                 <dt class="aggro">
                                     고객들이 찾는 <span class="c_gradient">1순위</span>
-                                    <p class="highlight animate"><span>100% 수제 생크림</span></p>
+                                    <p class="highlight" data-aos="highlight"><span>100% 수제 생크림</span></p>
                                 </dt>
                                 <dd>시크릿레시피를 통해 직접 제조한 생크림으로 <br/> 음료와 디저트의 퀄리티를 높여 매출상승과 고객만족을 극대화 시킵니다.</dd>
                             </dl>
                             <dl>
                                 <dt class="aggro">
                                     일반적인 물 베이스는 <span class="c_gradient">NO!</span>
-                                    <p class="highlight animate"><span>꽃차 베이스</span></p>
+                                    <p class="highlight" data-aos="highlight"><span>꽃차 베이스</span></p>
                                 </dt>
                                 <dd>독보적인 셀렉만의 베이스로 제조된 꽃차 우린 물을 사용하여<br/> 미각과 시각적인 효과를 증대시킵니다.</dd>
                             </dl>
@@ -477,7 +492,7 @@
                                     <dl>
                                         <dt class="aggro">
                                             셀렉만의 <span class="c_gradient">맞춤 원두디자인</span>
-                                            <p class="highlight animate"><span>블렌딩 3종류</span></p>
+                                            <p class="highlight" data-aos="highlight"><span>블렌딩 3종류</span></p>
                                         </dt>
                                         <dd class="dot"><span class="blod">셀렉 밀크베이스 원두블렌딩</span> <span class="semi">:</span> 견과류와 같은 고소한 단맛, 중후한바디</dd>
                                         <dd class="dot"><span class="blod">셀렉 초콜렛 티 원두블렌딩</span> <span class="semi">:</span> 초콜렛과 같은 단맛, 부드러운 산미, 클린한 에프터</dd>
@@ -493,7 +508,7 @@
                                     <dl>
                                         <dt class="aggro">
                                             고객들이 찾는 <span class="c_gradient">1순위</span>
-                                            <p class="highlight animate"><span>100% 수제 생크림</span></p>
+                                            <p class="highlight" data-aos="highlight"><span>100% 수제 생크림</span></p>
                                         </dt>
                                         <dd>시크릿레시피를 통해 직접 제조한 생크림으로 <br/> 음료와 디저트의 퀄리티를 높여 매출상승과 고객만족을 극대화 시킵니다.</dd>
                                     </dl>
@@ -507,7 +522,7 @@
                                     <dl>
                                         <dt class="aggro">
                                             일반적인 물 베이스는 <span class="c_gradient">NO!</span>
-                                            <p class="highlight animate"><span>꽃차 베이스</span></p>
+                                            <p class="highlight" data-aos="highlight"><span>꽃차 베이스</span></p>
                                         </dt>
                                         <dd>독보적인 셀렉만의 베이스로 제조된 꽃차 우린 물을 사용하여<br/> 미각과 시각적인 효과를 증대시킵니다.</dd>
                                     </dl>
@@ -527,7 +542,7 @@
                     <p class="tag c_light_gray">차원이 다른 국가대표 원두전문가들</p>
                     <div class="title">
                         <p class="c_white">체계적인</p>
-                        <p class="highlight animate bg_black"><span>블렌딩 R&D</span></p>
+                        <p class="highlight bg_black" data-aos="highlight"><span>블렌딩 R&D</span></p>
                     </div>
                     <p class="desc c_light_gray">고객의 니즈에 맞춰 다양한 원두 블렌딩을 연구 및 설계하여 <br/> 높은 품질로써 최상의 만족도를 선사해드립니다.</p>
                 </div>
@@ -583,9 +598,9 @@
             <!-- section07 -->
             <section class="section07">
                 <ul class="icon_list">
-                    <li class="icon1"><img src="./assets/img/section_07_obj_02.png" alt=""></li>
-                    <li class="icon2"><img src="./assets/img/section_07_obj_01.png" alt=""></li>
-                    <li class="icon3"><img src="./assets/img/section_07_obj_03.png" alt=""></li>
+                    <li class="icon1" data-aos="sniping" data-aos-delay="400"><img src="./assets/img/section_07_obj_02.png" alt=""></li>
+                    <li class="icon2" data-aos="sniping" data-aos-delay="200"><img src="./assets/img/section_07_obj_01.png" alt=""></li>
+                    <li class="icon3" data-aos="sniping" data-aos-delay="600"><img src="./assets/img/section_07_obj_03.png" alt=""></li>
                 </ul>
                 <div class="desert_slide desert_top_slide">
                     <div class="swiper-wrapper">
@@ -599,9 +614,9 @@
                     <p class="tag">주문 객단가 높이는 셀렉노하우</p>
                     <div class="title">
                         <p>
-                            고객<span class="c_gradient">취향 저격하는</span>
+                            고객 <span class="c_gradient" data-aos="flash">취향 저격하는</span>
                         </p>
-                        <p class="highlight animate"><span>특별한 디저트</span></p>
+                        <p class="highlight" data-aos="highlight"><span>특별한 디저트</span></p>
                     </div>
                     <p class="desc">분마다 시간마다 달라지는 고객들의 니즈들을 간파한<br/> 다양한 디저트로 주문단가 및 주문량 상승을 동시에 끌어냅니다.</p>
                 </div>
@@ -616,7 +631,6 @@
                         </div>
                         <h4 class="aggro">주문단가 <span><img src="./assets/img/section_07_txt_02.png" alt=""></span> 주문량</h4>
                         <p class="up" data-text="UP!">UP!</p>
-<!--                        <p class="up"><img src="./assets/img/section_07_txt_01.png" alt=""></p>-->
                     </div>
                     <div class="desert_swiper">
                         <div class="swiper-wrapper">
@@ -645,14 +659,14 @@
             <section class="section08">
                 <div class="title_box">
                     <p class="tag c_light_gray">감성을 자극하는 우리동네 핫플레이스</p>
-                    <div class="title">
+                    <div class="title" data-aos="highlight">
                         <p>
                             <span class="c_white">낮에는</span>
-                            <span class="highlight animate"><span>핫하게</span></span>
+                            <span class="highlight"><span>핫하게</span></span>
                         </p>
                         <p>
                             <span class="c_white">밤에는</span>
-                            <span class="highlight animate bg_purple"><span>힙하게</span></span>
+                            <span class="highlight bg_purple"><span>힙하게</span></span>
                         </p>
                     </div>
                     <p class="desc c_light_gray">고객이 계속 머물고 싶은 공간은 <br/> 인테리어 컨셉에서부터 차이가 보여집니다.</p>
@@ -666,7 +680,7 @@
                             <dl>
                                 <dt class="aggro">
                                     소형평수도 가능한
-                                    <p class="highlight animate"><span>감각적인 낮/밤 핫플레이스</span></p>
+                                    <p class="highlight" data-aos="highlight" ><span>감각적인 낮/밤 핫플레이스</span></p>
                                 </dt>
                                 <dd>
                                     매장 평수가 작더라도 트렌디한 셀렉만의 인테리어로<br/>
@@ -683,7 +697,7 @@
                             <dl>
                                 <dt class="aggro">
                                     배달 동선 최적화된
-                                    <p class="highlight animate"><span>픽업존 익스테리어</span></p>
+                                    <p class="highlight" data-aos="highlight" ><span>픽업존 익스테리어</span></p>
                                 </dt>
                                 <dd>
                                     점주, 고객 라이더 모두 만족을 이끌어내는<br/>
@@ -691,6 +705,14 @@
                                     최대의 효율을 낼 수 있는 구조입니다.
                                 </dd>
                             </dl>
+                        </div>
+                    </div>
+                    <div class="hotplace_txt">
+                        <div class="txt_slide place_txt_slide">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="./assets/img/section_08_txt.png" alt=""></div>
+                                <div class="swiper-slide"><img src="./assets/img/section_08_txt.png" alt=""></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -736,6 +758,7 @@
                                     <div class="swiper-button-next place-next"></div>
                                     <div class="swiper-button-prev place-prev"></div>
                                 </div>
+                                <div class="swiper-pagination"></div>
                             </div>
 
                             <div class="slide place_next_slide">
@@ -771,6 +794,7 @@
                                     <div class="swiper-button-next place-next2"></div>
                                     <div class="swiper-button-prev place-prev2"></div>
                                 </div>
+                                <div class="swiper-pagination2"></div>
                             </div>
 
                             <div class="slide place_next_slide2">
@@ -795,8 +819,8 @@
                         <div class="title_box">
                             <p class="tag c_light_gray">어떤 시기라도 안정된 매출의 핵심은</p>
                             <div class="title">
-                                <p class="c_gradient line" data-text="3-WAY">3-WAY</p>
-                                <p class="highlight animate bg_black"><span>탄력 운영전략</span></p>
+                                <p class="c_gradient line" data-text="3-WAY" data-aos="flash">3-WAY</p>
+                                <p class="highlight bg_black" data-aos="highlight"><span>탄력 운영전략</span></p>
                             </div>
                             <p class="desc c_light_gray">평수, 상권 입지가 어떠하든지 안정적인 매출 창출을 위한<br/> 탄력적인 운영시스템을 구축하였습니다.</p>
                         </div>
@@ -813,9 +837,9 @@
                             <img src="./assets/img/section_10_img.jpg" alt="">
                         </div>
                         <ul class="circle_box">
-                           <li>포장</li>
+                           <li data-aos="slide-left" data-aos-delay="100">포장</li>
                            <li class="center">홀</li>
-                           <li>배달</li>
+                           <li data-aos="slide-right" data-aos-delay="100">배달</li>
                         </ul>
                     </div>
                 </div>
@@ -827,7 +851,7 @@
                 <div class="title_box">
                     <p class="tag">이제 특별함을 셀렉할 시간</p>
                     <div class="title">
-                        <p class="highlight animate"><span>메뉴소개</span></p>
+                        <p class="highlight" data-aos="highlight"><span>메뉴소개</span></p>
                     </div>
                     <p class="desc">매일 찾고 싶은 셀렉커피랩만의 시크릿레시피로 <br/> 특별한 감동을 선사해드리고자 합니다.</p>
                 </div>
@@ -1142,18 +1166,18 @@
                         <p class="tag c_light_gray">카페음료, 이제는 캔배달이 대세</p>
                         <div class="title">
                             <p>
-                                <span class="c_gradient line" data-text="단체배달">단체배달</span><span class="c_white">도</span>
+                                <span class="c_gradient line" data-text="단체배달" data-aos="flash">단체배달</span><span class="c_white">도</span>
                             </p>
                             <p>
                                 <span class="c_white">줄잇는</span>
-                                <span class="highlight animate bg_black"><span>장악력</span></span>
+                                <span class="highlight bg_black" data-aos="highlight"><span>장악력</span></span>
                             </p>
                         </div>
                         <p class="desc c_light_gray">일반컵 음료 포장보다 오랜시간 동안의 맛 유지와 <br/> 안정성이 보장되어 배달과 포장에 효율적입니다.</p>
                     </div>
                     <div class="img_con">
                         <img src="./assets/img/section_12_obj_01.png" alt="">
-                        <ul class="circle-list bounce ">
+                        <ul class="circle-list bounce">
                             <li>500ml</li>
                             <li>355ml</li>
                             <li>캔 1리터</li>
@@ -1162,12 +1186,12 @@
                     </div>
                 </div>
                 <ul class="thumb_con">
-                    <li><img src="./assets/img/section_12_thumb_01.jpg" alt=""></li>
-                    <li><img src="./assets/img/section_12_thumb_02.jpg" alt=""></li>
-                    <li><img src="./assets/img/section_12_thumb_03.jpg" alt=""></li>
-                    <li><img src="./assets/img/section_12_thumb_04.jpg" alt=""></li>
-                    <li><img src="./assets/img/section_12_thumb_05.jpg" alt=""></li>
-                    <li><img src="./assets/img/section_12_thumb_06.jpg" alt=""></li>
+                    <li data-aos="fade-up"><img src="./assets/img/section_12_thumb_01.jpg" alt=""></li>
+                    <li data-aos="fade-up" data-aos-delay="200"><img src="./assets/img/section_12_thumb_02.jpg" alt=""></li>
+                    <li data-aos="fade-up" data-aos-delay="400"><img src="./assets/img/section_12_thumb_03.jpg" alt=""></li>
+                    <li data-aos="fade-up" data-aos-delay="600"><img src="./assets/img/section_12_thumb_04.jpg" alt=""></li>
+                    <li data-aos="fade-up" data-aos-delay="800"><img src="./assets/img/section_12_thumb_05.jpg" alt=""></li>
+                    <li data-aos="fade-up" data-aos-delay="1000"><img src="./assets/img/section_12_thumb_06.jpg" alt=""></li>
                 </ul>
                 <div class="thumb_slide">
                     <div class="swiper-wrapper">
@@ -1188,20 +1212,26 @@
                     <p class="tag c_light_gray">1등만 고집하는 셀렉의 인기</p>
                     <div class="title">
                         <p>
-                            <span class="c_gradient line" data-text="365일">365일</span><span class="c_white">내내</span>
+                            <span class="c_gradient line" data-text="365일" data-aos="flash">365일</span><span class="c_white">내내</span>
                         </p>
                         <p>
                             <span class="c_white">배달 평점</span>
-                            <span class="highlight animate"><span>5.0점</span></span>
+                            <span class="highlight" data-aos="highlight"><span>5.0점</span></span>
                         </p>
                     </div>
                     <p class="desc c_light_gray">100% 실제 고객님들께서 남겨주신 리뷰를 보시면 <br/> 셀렉만의 남다른 인기를 실감하실 수 있습니다.</p>
                 </div>
                 <div class="info_con">
-                    <div class="delivery_logo">
-                        <img src="./assets/img/section_13_logo_01.png" alt="">
-                        <img src="./assets/img/section_13_logo_02.png" alt="">
-                        <img src="./assets/img/section_13_logo_03.png" alt="">
+                    <div class="delivery_logo" data-aos="zoom-in" data-aos-anchor-placement="center-bottom">
+                        <div class="bound-ani bemin">
+                            <img src="./assets/img/section_13_logo_01.png" alt="">
+                        </div>
+                        <div class="bound-ani eats">
+                            <img src="./assets/img/section_13_logo_02.png" alt="">
+                        </div>
+                        <div class="bound-ani yogiyo">
+                            <img src="./assets/img/section_13_logo_03.png" alt="">
+                        </div>
                     </div>
                     <div class="phone_con">
                         <div class="phone_slide">
@@ -1219,11 +1249,11 @@
                         </div>
                     </div>
                     <ul class="ranking_list">
-                        <li>배달앱 맛집랭킹 <span>1등</span></li>
-                        <li>재 주문률 <span>1등</span></li>
-                        <li>월 매출 배달비율 <span>56%</span></li>
-                        <li>배민VIP 단골가게 <span>1등</span></li>
-                        <li>고객추천 가게 <span>1등</span></li>
+                        <li data-aos="zoom-in" data-aos-easing="ease-in-out-back" data-aos-delay="200">배달앱 맛집랭킹 <span>1등</span></li>
+                        <li data-aos="zoom-in" data-aos-easing="ease-in-out-back" data-aos-delay="400">재 주문률 <span>1등</span></li>
+                        <li data-aos="zoom-in" data-aos-easing="ease-in-out-back" data-aos-delay="600">월 매출 배달비율 <span>56%</span></li>
+                        <li data-aos="zoom-in" data-aos-easing="ease-in-out-back" data-aos-delay="800">배민VIP 단골가게 <span>1등</span></li>
+                        <li data-aos="zoom-in" data-aos-easing="ease-in-out-back" data-aos-delay="1000">고객추천 가게 <span>1등</span></li>
                     </ul>
                     <div class="img_slide">
                         <div class="swiper-wrapper">
@@ -1241,19 +1271,21 @@
             <!-- section14 -->
             <section class="section14">
                 <div class="inner">
-                    <div class="txt_slide txt_left_slide left">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="./assets/img/section_14_txt.png" alt=""></div>
-                            <div class="swiper-slide"><img src="./assets/img/section_14_txt.png" alt=""></div>
+                    <div class="txt_slide_con">
+                        <div class="txt_slide txt_left_slide left">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="./assets/img/section_14_txt.png" alt=""></div>
+                                <div class="swiper-slide"><img src="./assets/img/section_14_txt.png" alt=""></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="txt_slide txt_right_slide right">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="./assets/img/section_14_txt.png" alt=""></div>
-                            <div class="swiper-slide"><img src="./assets/img/section_14_txt.png" alt=""></div>
+                        <div class="txt_slide txt_right_slide right">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="./assets/img/section_14_txt.png" alt=""></div>
+                                <div class="swiper-slide"><img src="./assets/img/section_14_txt.png" alt=""></div>
+                            </div>
                         </div>
-                    </div>
 
+                    </div>
                     <div class="title_box">
                         <p class="tag c_light_gray">진짜 상생마인드란 이런 것</p>
                         <div class="title">
@@ -1339,11 +1371,11 @@
             <section class="section15">
                 <div class="inner">
                     <div class="coin_box">
-                        <img src="./assets/img/section_15_coin_01.png" alt="">
-                        <img src="./assets/img/section_15_coin_02.png" alt="">
-                        <img src="./assets/img/section_15_coin_03.png" alt="">
-                        <img src="./assets/img/section_15_coin_04.png" alt="">
-                        <img src="./assets/img/section_15_coin_05.png" alt="">
+                        <img src="./assets/img/section_15_coin_01.png" alt="" data-aos="fade-down-right" data-aos-offset="0">
+                        <img src="./assets/img/section_15_coin_02.png" alt="" data-aos="fade-down-right" data-aos-offset="0">
+                        <img src="./assets/img/section_15_coin_03.png" alt="" data-aos="fade-down-right" data-aos-offset="0">
+                        <img src="./assets/img/section_15_coin_04.png" alt="" data-aos="fade-down-left" data-aos-offset="0">
+                        <img src="./assets/img/section_15_coin_05.png" alt="" data-aos="fade-down-left" data-aos-offset="0">
                     </div>
                     <div class="title_box">
                         <p class="tag">거품없는 성공창업의 첫 걸음</p>
@@ -1392,7 +1424,7 @@
                                 <span class="c_pink">100만원</span> 상당 <br/>
                                 물류 지원!</p>
                         </div>원
-                        <p class="stamp"><strong>1+1</strong> 창업혜택</p>
+                        <p class="stamp" data-aos="zoom-in" data-aos-easing="ease-in-out-back" data-aos-duration="400" ><strong>1+1</strong> 창업혜택</p>
                     </div>
                 </div>
                 <div class="main_slide">
@@ -1415,7 +1447,7 @@
                     <p class="desc c_light_gray">고매출 최적의 상권분석, 디테일한 입지조사를 통해 <br/> 1호 직영점을 준비하는 마음으로 준비해드리겠습니다.</p>
                 </div>
                 <div class="process_list">
-                    <div class="item">
+                    <div class="item" data-aos="fade-up">
                         <div class="txt_box">
                             <p class="step">STEP01</p>
                             <p class="tit">가맹상담</p>
@@ -1428,7 +1460,7 @@
                             <img src="./assets/img/section_16_ico_01.png" alt="">
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" data-aos="fade-up">
                         <div class="txt_box">
                             <p class="step">STEP02</p>
                             <p class="tit">상권분석</p>
@@ -1441,7 +1473,7 @@
                             <img src="./assets/img/section_16_ico_02.png" alt="">
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" data-aos="fade-up">
                         <div class="txt_box">
                             <p class="step">STEP03</p>
                             <p class="tit">가맹계약</p>
@@ -1454,7 +1486,7 @@
                             <img src="./assets/img/section_16_ico_03.png" alt="">
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" data-aos="fade-up">
                         <div class="txt_box">
                             <p class="step">STEP04</p>
                             <p class="tit">인테리어 시공</p>
@@ -1467,7 +1499,7 @@
                             <img src="./assets/img/section_16_ico_04.png" alt="">
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" data-aos="fade-up">
                         <div class="txt_box">
                             <p class="step">STEP05</p>
                             <p class="tit">운영 교육</p>
@@ -1480,7 +1512,7 @@
                             <img src="./assets/img/section_16_ico_05.png" alt="">
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" data-aos="fade-up">
                         <div class="txt_box">
                             <p class="step">STEP06</p>
                             <p class="tit">최종점검</p>
@@ -1493,7 +1525,7 @@
                             <img src="./assets/img/section_16_ico_06.png" alt="">
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" data-aos="fade-up">
                         <div class="txt_box">
                             <p class="step">STEP07</p>
                             <p class="tit">오픈초기</p>
@@ -1506,7 +1538,7 @@
                             <img src="./assets/img/section_16_ico_07.png" alt="">
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" data-aos="fade-up">
                         <div class="txt_box">
                             <p class="step">STEP08</p>
                             <p class="tit">사후관리</p>
@@ -1519,7 +1551,7 @@
                             <img src="./assets/img/section_16_ico_08.png" alt="">
                         </div>
                     </div>
-                    <div class="item logo">
+                    <div class="item logo"  data-aos="fade-up">
                         <img src="./assets/img/section_16_logo.png" alt="">
                     </div>
                 </div>
@@ -1638,12 +1670,12 @@
             <section class="section17">
                 <div class="title_box">
                     <div class="title">
-                        <p>성공의 <span class="c_gradient">주인공</span></p>
-                        <p>바로 <span class="highlight animate"><span>당신입니다</span></span></p>
+                        <p>성공의 <span class="c_gradient" data-aos="flash">주인공</span></p>
+                        <p>바로 <span class="highlight" data-aos="highlight"><span>당신입니다</span></span></p>
                     </div>
                     <p class="desc">본사의 각 분야별 전문가가 처음부터 끝까지 <br/> 성공적인 창업을 위해 끊임없이 도와드리겠습니다.</p>
                 </div>
-                <div class="table_box">
+                <div class="table_box" data-aos="fade-up">
                     <p class="table-desc">VAT별도 / 10평 기준</p>
                     <ul class="table_tit">
                        <li>구분 <span class="mo_only">및 상세내용</span></li>
@@ -1651,7 +1683,7 @@
                        <li>금액</li>
                     </ul>
                     <ul class="table_con">
-                       <li>
+                       <li >
                            <div class="tit_box">
                                <span class="tit">가맹비</span>
                                <span class="desc">셀렉커피랩 영업권, 브랜드 사용, 지역상권보호</span>
@@ -1660,9 +1692,9 @@
                                <span class="origin_price">500만원</span>
                                <strong>0원</strong>
                            </p>
-                           <img src="./assets/img/section_17_stamp_01.png" alt="" class="stamp">
+                           <img src="./assets/img/section_17_stamp_01.png" alt="" class="stamp" data-aos="zoom-in">
                        </li>
-                        <li>
+                        <li >
                             <div class="tit_box">
                                 <p class="tit">교육비</p>
                                 <p class="desc">레시피 교육 및 점포운영, 현장실습교육</p>
@@ -1671,7 +1703,7 @@
                                 <span class="origin_price">500만원</span>
                                 <strong>300만원</strong>
                             </p>
-                            <img src="./assets/img/section_17_stamp_02.png" alt="" class="stamp">
+                            <img src="./assets/img/section_17_stamp_02.png" alt="" class="stamp" data-aos="zoom-in">
                         </li>
                         <li>
                             <div class="tit_box">
@@ -1682,7 +1714,7 @@
                                 <strong>300만원</strong>
                             </p>
                         </li>
-                        <li>
+                        <li >
                             <div class="tit_box">
                                 <p class="tit">인테리어</p>
                                 <p class="desc">목공, 전기, 타일, 설비, 실측비, 조명비, 타일</p>
@@ -1690,7 +1722,7 @@
                             <p class="price">
                                 <strong>평당 250만원</strong>
                             </p>
-                            <img src="./assets/img/section_17_stamp_03.png" alt="" class="stamp">
+                            <img src="./assets/img/section_17_stamp_03.png" alt="" class="stamp" data-aos="zoom-in">
                         </li>
                         <li>
                             <div class="tit_box">
@@ -1728,7 +1760,7 @@
                                 <strong>별도 문의</strong>
                             </p>
                         </li>
-                        <li>
+                        <li >
                             <div class="tit_box">
                                 <p class="tit">로열티</p>
                                 <p class="desc">※ 월매출 2,000만원 미만시 면제  </p>
@@ -1736,7 +1768,7 @@
                             <p class="price">
                                 <strong>월 30만원</strong>
                             </p>
-                            <img src="./assets/img/section_17_stamp_04.png" alt="" class="stamp">
+                            <img src="./assets/img/section_17_stamp_04.png" alt="" class="stamp" data-aos="zoom-in">
                         </li>
                     </ul>
                     <div class="total_price">
@@ -1757,7 +1789,7 @@
                 <div class="title_box">
                     <div class="title">
                         <p class="c_white">셀렉커피랩</p>
-                        <p class="c_gradient">매장찾기</p>
+                        <p class="c_gradient" data-aos="flash">매장찾기</p>
                     </div>
                     <img src="./assets/img/section_18_con.png" alt="" class="pc_only">
                     <img src="./assets/img/mo_section_18_con.png" alt="" class="mo_only">
@@ -1771,7 +1803,9 @@
                     <div class="title">
                         <p>창업문의</p>
                     </div>
-                    <img src="./assets/img/section_19_con.jpg" alt="">
+                    <div class="img_con">
+                        <img src="./assets/img/section_19_con.jpg" alt="">
+                    </div>
                 </div>
             </section>
             <!-- //section19 -->
@@ -1779,12 +1813,63 @@
         </div>
         <!-- // contents -->
 
-        <div class="footer">
+        <div class="inquiry_frame">
+            <div class="inquiry_sec">
+                <div class="inquiry">
+                    <div class="inner">
+                        <div class="mo_con">
+                            <div class="tel">
+                                <a class="aggro" href="tel:02-501-6333">02.501.6333</a>
+                            </div>
+                            <div class="title">
+                                <img src="./assets/img/logo_w.png" alt="">
+                                <p class="aggro">성공창업상담</p>
+                            </div>
+                        </div>
+                        <div class="frm">
+                            <div class="frm_inner">
+                                <input type="text" placeholder="성함">
+                                <input type="text" class="phone" placeholder="전화번호">
+                                <input type="text" placeholder="창업희망지역">
+                                <div class="check_con">
+                                    <input type="checkbox" id="agree_chk">
+                                    <label for="agree_chk" class="agree_chk">
+                                        <span>개인정보취급방침</span>
+                                        동의하기
+                                    </label>
+                                </div>
+                                <button type="button">상담신청</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="footer">
+            <div class="inner">
+                <ul class="link_list">
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이메일 무단수집거부</a></li>
+                </ul>
+                <div class="address">
+                    <div class="con">
+                        <p>상호명 : 셀렉커피랩(SELECT)</p>
+                        <p>대표자 : 전승한</p>
+                        <p>사업자등록번호 : 225-07-31756</p>
+                    </div>
+                    <div class="con">
+                        <p>주소 : 서울특별시 강남구 테헤란로39길 50, 1층(역삼동)</p>
+                        <p>이메일 : selectx@naver.com</p>
+                        <p>창업문의 : 02-501-6333</p>
+                    </div>
+                </div>
+                <p class="copy">Copyright © 2023 <span>SELECTCOFFEELAB.</span> All Rights Reserved</p>
+            </div>
         </div>
     </div>
 <script>
-    // AOS.init();
+    AOS.init();
 </script>
 </body>
 </html>
