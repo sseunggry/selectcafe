@@ -1227,6 +1227,14 @@
 		font-size: 10.16vw;
 	}
 
+	.highlight::before{
+		height: calc(100% + 0.65vw);
+	}
+
+    .highlight.animate::before{
+		width: calc(100% + 1.3vw);
+	}
+
 	.notice_list {
 		font-size: 3.65vw;
 	}
