@@ -5370,8 +5370,16 @@
 	font-weight: 500;
 }
 
-.section15 .main_slide {
+.section15 .section15_slide {
+	overflow: hidden;
+	position: absolute;
 	bottom: 0;
+	width: 100%;
+	background-color: #8438eb;
+}
+
+.section15 .section15_slide .swiper-slide {
+	width: 607px;
 }
 
 @media all and (max-width: 1800px) {
@@ -5584,6 +5592,10 @@
 	.section15 .banner .stamp strong {
 		margin: 1.3vw 0 -2.08vw;
 		font-size: 13.02vw;
+	}
+
+	.section15 .section15_slide .swiper-slide {
+		width: 79.04vw;
 	}
 }
 /*

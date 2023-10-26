@@ -63,6 +63,7 @@ $(function(){
 
 	infoSlide();
 	processSlide();
+	section15Slide();
 
 	// gsapFn();
 
@@ -770,6 +771,20 @@ function moPlaceSwiperFn2(){
 		pagination: {
 			el: ".place_slide_con .swiper-pagination2",
 			type: "progressbar",
+		},
+	});
+}
+
+let section15Swiper;
+function section15Slide(){
+	section15Swiper = new Swiper(".section15_slide", {
+		speed: 5000,
+		loop: true,
+		slidesPerView : "auto",
+		allowTouchMove : false,
+		autoplay: {
+			delay: 0,
+			disableOnInteraction: false,
 		},
 	});
 }
