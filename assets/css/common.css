@@ -2,44 +2,44 @@
 /* [Web Font]
 /* ====================================================================== */
 @font-face {
-	font-family: "NotoSansCJKkr";
-	src: url("../fonts/NotoSansCJKkr-Thin.ttf") format("truetype"), url("../fonts/NotoSansCJKkr-Thin.otf") format("opentype"), url("../fonts/NotoSansCJKkr-Thin.woff") format("woff");
+	font-family: "Noto Sans KR";
+	src: url("../fonts/NotoSansKR-Thin.woff2") format("woff2"), url("../fonts/NotoSansKR-Thin.woff") format("woff");
 	font-weight: 100;
 	font-style: normal;
 }
 @font-face {
-	font-family: "NotoSansCJKkr";
-	src: url("../fonts/NotoSansCJKkr-Light.ttf") format("truetype"), url("../fonts/NotoSansCJKkr-Light.otf") format("opentype"), url("../fonts/NotoSansCJKkr-Light.woff") format("woff");
+	font-family: "Noto Sans KR";
+	src: url("../fonts/NotoSansKR-Light.woff2") format("woff2"), url("../fonts/NotoSansKR-Light.woff") format("woff");
 	font-weight: 300;
 	font-style: normal;
 }
 @font-face {
-	font-family: "NotoSansCJKkr";
-	src: url("../fonts/NotoSansCJKkr-DemiLight.ttf") format("truetype"), url("../fonts/NotoSansCJKkr-DemiLight.otf") format("opentype"), url("../fonts/NotoSansCJKkr-DemiLight.woff") format("woff");
+	font-family: "Noto Sans KR";
+	src: url("../fonts/NotoSansKR-DemiLight.woff2") format("woff2"), url("../fonts/NotoSansKR-DemiLight.woff") format("woff");
 	font-weight: 350;
 	font-style: normal;
 }
 @font-face {
-	font-family: "NotoSansCJKkr";
-	src: url("../fonts/NotoSansCJKkr-Regular.ttf") format("truetype"), url("../fonts/NotoSansCJKkr-Regular.otf") format("opentype"), url("../fonts/NotoSansCJKkr-Regular.woff") format("woff");
+	font-family: "Noto Sans KR";
+	src: url("../fonts/NotoSansKR-Regular.woff2") format("woff2"), url("../fonts/NotoSansKR-Regular.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
-	font-family: "NotoSansCJKkr";
-	src: url("../fonts/NotoSansCJKkr-Medium.ttf") format("truetype"), url("../fonts/NotoSansCJKkr-Medium.otf") format("opentype"), url("../fonts/NotoSansCJKkr-Medium.woff") format("woff");
+	font-family: "Noto Sans KR";
+	src: url("../fonts/NotoSansKR-Medium.woff2") format("woff2"), url("../fonts/NotoSansKR-Medium.woff") format("woff");
 	font-weight: 500;
 	font-style: normal;
 }
 @font-face {
-	font-family: "NotoSansCJKkr";
-	src: url("../fonts/NotoSansCJKkr-Bold.ttf") format("truetype"), url("../fonts/NotoSansCJKkr-Bold.otf") format("opentype"), url("../fonts/NotoSansCJKkr-Bold.woff") format("woff");
+	font-family: "Noto Sans KR";
+	src: url("../fonts/NotoSansKR-Bold.woff2") format("woff2"), url("../fonts/NotoSansKR-Bold.woff") format("woff");
 	font-weight: 700;
 	font-style: normal;
 }
 @font-face {
-	font-family: "NotoSansCJKkr";
-	src: url("../fonts/NotoSansCJKkr-Black.ttf") format("truetype"), url("../fonts/NotoSansCJKkr-Black.otf") format("opentype"), url("../fonts/NotoSansCJKkr-Black.woff") format("woff");
+	font-family: "Noto Sans KR";
+	src: url("../fonts/NotoSansKR-Black.woff2") format("woff2"), url("../fonts/NotoSansKR-Black.woff") format("woff");
 	font-weight: 900;
 	font-style: normal;
 }
@@ -65,7 +65,7 @@ html {
 	font-size: 10px;
 }
 html[lang=ko-KR], html[lang=ko] {
-	font-family: "NotoSansCJKkr", sans-serif;
+	font-family: "Noto Sans KR", sans-serif;
 }
 html[lang=ko-KR] body, html[lang=ko] body {
 	font-size: 16px;
@@ -74,7 +74,7 @@ html[lang=ko-KR] body, html[lang=ko] body {
 	color: #000;
 }
 html[lang=en], html *[lang=en] {
-	font-family: "NotoSansCJKkr", Arial, sans-serif, serif;
+	font-family: "Noto Sans KR", Arial, sans-serif, serif;
 }
 html[lang=en] body, html *[lang=en] body {
 	font-size: 18px;
@@ -683,6 +683,11 @@ input::placeholder, textarea::placeholder {
 	-webkit-text-fill-color: transparent;
 }
 
+.c_gradient.line {
+	color: transparent !important;
+	white-space: nowrap;
+}
+
 .c_gradient.line::before {
 	content: attr(data-text);
 	position: absolute;
@@ -693,6 +698,7 @@ input::placeholder, textarea::placeholder {
 	font-size: inherit;
 	-webkit-text-stroke-width: 6px;
 	-webkit-text-stroke-color: white;
+	white-space: nowrap;
 }
 
 .c_gradient.line::after {
@@ -708,6 +714,7 @@ input::placeholder, textarea::placeholder {
 	background: linear-gradient(-180deg, #ff1398 0%, #a524ff 57%, #128cff 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+	white-space: nowrap;
 }
 
 .c-purple {

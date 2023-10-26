@@ -224,7 +224,7 @@ function principleSlide(){
 		slidesPerView : 1,
 		loop: true,
 		loopedSlides: 3,
-		allowTouchMove: false,
+		// allowTouchMove: false,
 		autoplay: {
 			waitForTransition: false,
 			disableOnInteraction: false,
