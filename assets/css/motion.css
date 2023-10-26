@@ -105,11 +105,18 @@
 	        transition-delay: 0.2s;
 }
 
-
 .section12 .thumb_con li {
 	-webkit-transform: translate3d(0, 200px, 0);
 	        transform: translate3d(0, 200px, 0);
 	opacity: 0;
+	-webkit-transition: none;
+	transition: none;
+}
+
+.section12 .thumb_con.aos-animate li {
+	opacity: 1;
+	-webkit-transform: translateZ(0);
+	        transform: translateZ(0);
 	-webkit-transition-property: opacity, -webkit-transform;
 	transition-property: opacity, -webkit-transform;
 	transition-property: opacity, transform;
@@ -146,17 +153,6 @@
 .section12 .thumb_con li:nth-child(6) {
 	-webkit-transition-delay: 0.6s;
 	        transition-delay: 0.6s;
-}
-
-.section12 .thumb_con li:nth-child(1),
-.section12 .thumb_con li:nth-child(2),
-.section12 .thumb_con li:nth-child(3),
-.section12 .thumb_con li:nth-child(4),
-.section12 .thumb_con li:nth-child(5),
-.section12 .thumb_con li:nth-child(6) {
-	opacity: 1;
-	-webkit-transform: translateZ(0);
-	        transform: translateZ(0);
 }
 
 .section13 .info_con .ranking_list li:nth-child(1) {
@@ -316,6 +312,10 @@
 		-webkit-animation: none;
 		        animation: none;
 		opacity: 1;
+	}
+
+	.section08 [data-aos=highlight].aos-animate .highlight:before {
+		width: calc(100% + 1.3vw);
 	}
 
 	.section10 .img_box .circle_box li {

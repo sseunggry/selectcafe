@@ -34,7 +34,7 @@ $(function(){
 		} else {
 			$(".nav").removeClass("scrollDown");
 		}
-		console.log(scrolTop, window.innerHeight, $(".wrap").outerHeight(), $(".footer").outerHeight());
+
 		if( ( scrolTop + window.innerHeight ) >= ( $(".wrap").outerHeight() - $(".footer").outerHeight() ) ) {
 			$(".inquiry_sec").addClass("bot");
 		} else {
