@@ -63,7 +63,6 @@ $(function(){
 
 	infoSlide();
 	processSlide();
-	section15Slide();
 
 	// gsapFn();
 
@@ -203,7 +202,7 @@ function gsapMotion(){
 /*
 	main visual event
  */
-let mainSwiper, principleSwiper, imgSwiper, phoneSwiper, stepSwiper, infoSwiper = undefined, txtVerticalSwiper, recipeSwiper, recipeMoSwiper, blendSwiper, processSwiper = undefined, listSwiper;
+let mainSwiper, principleSwiper, imgSwiper, phoneSwiper, stepSwiper, stepImgSwiper, infoSwiper = undefined, txtVerticalSwiper, recipeSwiper, recipeMoSwiper, blendSwiper, processSwiper = undefined, listSwiper;
 
 function mainSlide(){
 	mainSwiper = new Swiper(".main_slide", {
@@ -224,7 +223,7 @@ function principleSlide(){
 		slidesPerView : 1,
 		loop: true,
 		loopedSlides: 3,
-		// allowTouchMove: false,
+		allowTouchMove: false,
 		autoplay: {
 			waitForTransition: false,
 			disableOnInteraction: false,
@@ -257,21 +256,32 @@ function listSlide(){
 	});
 }
 
-let principleTxtSwiper, placeTxtSwiper, txtTopSwiper, txtBotSwiper, txtLeftSwiper, txtRightSwiper, thumbSwiper;
+let principleTxtSwiper, placeTxtSwiper,placeTxtSwiper2, txtTopSwiper, txtBotSwiper, txtLeftSwiper, txtRightSwiper, thumbSwiper;
 function txtSlide(){
 	principleTxtSwiper = new Swiper(".principle_txt_slide", {
-		speed: 5000,
+		speed: 17000,
 		loop: true,
 		slidesPerView : "auto",
-		// allowTouchMove : false,
+		allowTouchMove : false,
 		autoplay: {
 			delay: 0,
 			disableOnInteraction: false,
 		},
 	});
 
-	placeTxtSwiper = new Swiper(".place_txt_slide", {
-		speed: 5000,
+	placeTxtSwiper = new Swiper(".hotplace_txt .place_txt_slide", {
+		speed: 20000,
+		loop: true,
+		slidesPerView : "auto",
+		allowTouchMove : false,
+		autoplay: {
+			delay: 0,
+			disableOnInteraction: false,
+		},
+	});
+
+	placeTxtSwiper2 = new Swiper(".section09 .place_txt_slide", {
+		speed: 13000,
 		loop: true,
 		slidesPerView : "auto",
 		allowTouchMove : false,
@@ -282,7 +292,7 @@ function txtSlide(){
 	});
 
 	txtTopSwiper = new Swiper(".txt_top_slide", {
-		speed: 5000,
+		speed: 16000,
 		loop: true,
 		slidesPerView : "auto",
 		allowTouchMove : false,
@@ -293,7 +303,7 @@ function txtSlide(){
 	});
 
 	txtBotSwiper = new Swiper(".txt_bot_slide", {
-		speed: 5000,
+		speed: 16000,
 		loop: true,
 		slidesPerView : "auto",
 		allowTouchMove : false,
@@ -304,7 +314,7 @@ function txtSlide(){
 	});
 
 	txtLeftSwiper = new Swiper(".txt_left_slide", {
-		speed: 5000,
+		speed: 15000,
 		loop: true,
 		slidesPerView : "auto",
 		allowTouchMove : false,
@@ -315,7 +325,7 @@ function txtSlide(){
 	});
 
 	txtRightSwiper = new Swiper(".txt_right_slide", {
-		speed: 5000,
+		speed: 15000,
 		loop: true,
 		slidesPerView : "auto",
 		allowTouchMove : false,
@@ -370,6 +380,14 @@ function stepSlide(){
 			disableOnInteraction: false,
 		},
 	});
+
+	stepImgSwiper = new Swiper(".section14 .stop_slide_img", {
+		loop: true,
+		slidesPerView : 1,
+	});
+
+	stepSwiper.controller.control = stepImgSwiper;
+	stepImgSwiper.controller.control = stepSwiper;
 }
 
 function infoSlide(){
@@ -459,6 +477,14 @@ function recipeSlide(){
 					},
 				});
 
+				recipeSwiper.on("slideChange", function () {
+					$(".recipe_box .img_con li").removeClass("active");
+					$(".recipe_box .img_con li").eq(recipeSwiper.realIndex).addClass("active");
+
+					$(".recipe_box .txt_list dl").removeClass("active");
+					$(".recipe_box .txt_list dl").eq(recipeSwiper.realIndex).addClass("active");
+				});
+
 				recipeTrigger = true;
 			}
 		} else {
@@ -503,6 +529,11 @@ function recipeSlide(){
 
 			$(".recipe_box .txt_list dl").removeClass("active");
 			$(".recipe_box .txt_list dl").eq(recipeSwiper.realIndex).addClass("active");
+
+			$(".recipe_box .txt_list dl").find(".highlight").removeClass("aos-animate");
+			setTimeout(function () {
+				$(".recipe_box .txt_list dl").eq(recipeSwiper.realIndex).find(".highlight").addClass("aos-animate");
+			},100);
 		});
 
 		recipeTrigger = true;
@@ -554,7 +585,7 @@ function gsapFn(){
 let desertSwiper, desertTopSwiper, desertBotSwiper;
 function desertSlide(){
 	desertSwiper = new Swiper(".desert_swiper", {
-		speed: 4500,
+		speed: 2300,
 		loop: true,
 		slidesPerView : "auto",
 		allowTouchMove : false,
@@ -771,20 +802,6 @@ function moPlaceSwiperFn2(){
 		pagination: {
 			el: ".place_slide_con .swiper-pagination2",
 			type: "progressbar",
-		},
-	});
-}
-
-let section15Swiper;
-function section15Slide(){
-	section15Swiper = new Swiper(".section15_slide", {
-		speed: 5000,
-		loop: true,
-		slidesPerView : "auto",
-		allowTouchMove : false,
-		autoplay: {
-			delay: 0,
-			disableOnInteraction: false,
 		},
 	});
 }

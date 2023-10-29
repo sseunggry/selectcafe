@@ -43,24 +43,6 @@
 	font-weight: 900;
 	font-style: normal;
 }
-@font-face {
-	font-family: "SB Aggro";
-	src: url("../fonts/SB Aggro L.ttf") format("truetype"), url("../fonts/SB Aggro L.otf") format("opentype");
-	font-weight: 400;
-	font-style: normal;
-}
-@font-face {
-	font-family: "SB Aggro";
-	src: url("../fonts/SB Aggro M.ttf") format("truetype"), url("../fonts/SB Aggro M.otf") format("opentype");
-	font-weight: 500;
-	font-style: normal;
-}
-@font-face {
-	font-family: "SB Aggro";
-	src: url("../fonts/SB Aggro B.ttf") format("truetype"), url("../fonts/SB Aggro B.otf") format("opentype");
-	font-weight: 700;
-	font-style: normal;
-}
 html {
 	font-size: 10px;
 }
@@ -683,38 +665,15 @@ input::placeholder, textarea::placeholder {
 	-webkit-text-fill-color: transparent;
 }
 
-.c_gradient.line {
-	color: transparent !important;
-	white-space: nowrap;
-}
-
 .c_gradient.line::before {
-	content: attr(data-text);
-	position: absolute;
-	left: 0;
-	top: 0;
+	content: "";
+	display: inline-block;
 	width: 100%;
 	height: 100%;
-	font-size: inherit;
-	-webkit-text-stroke-width: 6px;
-	-webkit-text-stroke-color: white;
-	white-space: nowrap;
-}
-
-.c_gradient.line::after {
-	content: attr(data-text);
-	z-index: 1;
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background: -webkit-gradient(linear, left top, left bottom, from(#ff1398), color-stop(57%, #a524ff), to(#128cff));
-	background: -webkit-linear-gradient(top, #ff1398 0%, #a524ff 57%, #128cff 100%);
-	background: linear-gradient(-180deg, #ff1398 0%, #a524ff 57%, #128cff 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	white-space: nowrap;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center;
+	vertical-align: top;
 }
 
 .c-purple {

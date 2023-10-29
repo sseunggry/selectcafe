@@ -1,5 +1,3 @@
-html {scroll-behavior: smooth;}
-
 [data-aos][data-aos][data-aos-duration], body[data-aos-duration] [data-aos] {
 	-webkit-transition-duration: 1s;
 	        transition-duration: 1s;
@@ -23,11 +21,6 @@ html {scroll-behavior: smooth;}
 [data-aos=fade-down] {
 	-webkit-transform: translate3d(0, -20%, 0);
 	        transform: translate3d(0, -20%, 0);
-}
-
-[data-aos=flash] {
-	-webkit-animation: flash 1s infinite;
-	        animation: flash 1s infinite;
 }
 
 [data-aos=highlight].aos-animate:before {
@@ -66,6 +59,11 @@ html {scroll-behavior: smooth;}
 [data-aos=sniping].aos-animate img {
 	-webkit-animation-name: sniping;
 	        animation-name: sniping;
+}
+
+.aos-animate[data-aos=flash] {
+	-webkit-animation: flash 1s 2;
+	        animation: flash 1s 2;
 }
 
 .aos-animate .bemin {
@@ -261,29 +259,29 @@ html {scroll-behavior: smooth;}
 .section17 .table_con li:nth-child(1) .stamp {
 	-webkit-transition-duration: 0.4s;
 	        transition-duration: 0.4s;
-	-webkit-transition-delay: 0.2s;
-	        transition-delay: 0.2s;
+	-webkit-transition-delay: 0.4s;
+	        transition-delay: 0.4s;
 }
 
 .section17 .table_con li:nth-child(2) .stamp {
 	-webkit-transition-duration: 0.4s;
 	        transition-duration: 0.4s;
-	-webkit-transition-delay: 0.3s;
-	        transition-delay: 0.3s;
+	-webkit-transition-delay: 0.6s;
+	        transition-delay: 0.6s;
 }
 
 .section17 .table_con li:nth-child(4) .stamp {
 	-webkit-transition-duration: 0.4s;
 	        transition-duration: 0.4s;
-	-webkit-transition-delay: 0.4s;
-	        transition-delay: 0.4s;
+	-webkit-transition-delay: 0.8s;
+	        transition-delay: 0.8s;
 }
 
 .section17 .table_con li:nth-child(9) .stamp {
 	-webkit-transition-duration: 0.4s;
 	        transition-duration: 0.4s;
-	-webkit-transition-delay: 0.5s;
-	        transition-delay: 0.5s;
+	-webkit-transition-delay: 1s;
+	        transition-delay: 1s;
 }
 
 @media all and (max-width: 960px) {
@@ -294,6 +292,10 @@ html {scroll-behavior: smooth;}
 	}
 }
 @media all and (max-width: 768px) {
+	[data-aos=highlight].aos-animate:before {
+		width: calc(100% + 2vw);
+	}
+
 	.section01 .info .flex_con .icon_con .blod [data-aos=flash] {
 		-webkit-animation: none;
 		        animation: none;
@@ -314,10 +316,6 @@ html {scroll-behavior: smooth;}
 		-webkit-animation: none;
 		        animation: none;
 		opacity: 1;
-	}
-
-	.section08 [data-aos=highlight].aos-animate .highlight:before {
-		width: calc(100% + 1.3vw);
 	}
 
 	.section10 .img_box .circle_box li {
@@ -395,6 +393,34 @@ html {scroll-behavior: smooth;}
 	}
 	25%, 75% {
 		opacity: 0;
+	}
+}
+@-webkit-keyframes txtAni {
+	0% {
+		background-image: url("../img/section_07_txt_off.png");
+	}
+	50% {
+		background-image: url("../img/section_07_txt_off.png");
+	}
+	51% {
+		background-image: url("../img/section_07_txt_on.png");
+	}
+	100% {
+		background-image: url("../img/section_07_txt_on.png");
+	}
+}
+@keyframes txtAni {
+	0% {
+		background-image: url("../img/section_07_txt_off.png");
+	}
+	50% {
+		background-image: url("../img/section_07_txt_off.png");
+	}
+	51% {
+		background-image: url("../img/section_07_txt_on.png");
+	}
+	100% {
+		background-image: url("../img/section_07_txt_on.png");
 	}
 }
 @-webkit-keyframes sniping {
